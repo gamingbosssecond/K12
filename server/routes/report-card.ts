@@ -10,8 +10,15 @@ export const handleReportCard: RequestHandler = async (_req, res) => {
       res.status(502).json({ error: "Failed to fetch report card" });
       return;
     }
+    const contentLength = response.headers.get("content-length");
+    if (contentLength) {
+      res.setHeader("Content-Length", contentLength);
+    }
     res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", 'attachment; filename="report-card.pdf"');
+    res.setHeader(
+      "Content-Disposition",
+      'attachment; filename="report-card.pdf"',
+    );
     // @ts-ignore - Node streams are acceptable here
     response.body.pipe(res);
   } catch (e) {
