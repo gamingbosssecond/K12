@@ -12,7 +12,7 @@ export const circulars: Circular[] = [
     title: "PTM tomorrow",
     excerpt: "Dear parents and students, Good afternoon",
     dateISO: "2025-08-29",
-    content: `Dear parents and students,\n\nGood afternoon\nThis is to remind you that PTM for classes X and XII will be held tomorrow Saturday 30th August 2025.\n\nTiming:\nRoll Nos 1 to 25 - 8 a.m to 9 a.m\n\nRoll Nos 26 & above - 9 a.m to 10 a.m\n\nPTM is a very important programme of the school during which the parents get an opportunity to interact with teachers on matters related to academic performance and other aspects of school life. Therefore I request all the parents to attend the PTM tomorrow.\nHave a good day.\n\nRegards,\nFr. Armstrong Edison, SJ\nPrincipal`,
+    content: `Dear parents and students,\n\nGood afternoon\nThis is to remind you that PTM for classes X and XII will be held tomorrow Saturday 30th August 2025.\n\nTiming:\nRoll Nos 1 to 25 - 8 a.m to 9 a.m\n\nRoll Nos 26 & above - 9 a.m to 10 a.m\n\nPTM is a very important programme of the school during which the parents get an opportunity to interact with teachers on matters related to academic performance and other aspects of school life. Therefore I request all the parents to attend the PTM tomorrow.\nHave a good day.\n\nRegards,\nFr. Armstrong Edison SJ\nPrincipal`,
   },
   {
     id: "late-arrival",
