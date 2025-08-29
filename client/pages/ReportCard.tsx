@@ -75,68 +75,12 @@ export default function ReportCard() {
   };
 
   const handleDownload = async () => {
-    let fakeInterval: number | undefined;
     try {
       setDownloading(true);
-      setProgress(0);
-      let res: Response | null = null;
-      try {
-        res = await fetch(fileUrl);
-      } catch {
-        res = null;
-      }
-
-      if (!res || !res.ok || !res.body) {
-        // Fallback: fetch directly from remote (browser handles CORS)
-        try {
-          const direct = await fetch(remoteUrl);
-          if (!direct.ok || !direct.body) throw new Error("remote fetch failed");
-          res = direct;
-        } catch {
-          tryDirectOpen();
-          setProgress(null);
-          return;
-        }
-      }
-
-      const totalHeader = res.headers.get("content-length");
-      const total = totalHeader ? parseInt(totalHeader, 10) : 0;
-      const reader = res.body.getReader();
-      const chunks: Uint8Array[] = [];
-      let received = 0;
-
-      if (!total) {
-        fakeInterval = window.setInterval(() => {
-          setProgress((p) => {
-            const next = typeof p === "number" ? Math.min(p + 2, 90) : 0;
-            return next;
-          });
-        }, 150);
-      }
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        if (value) {
-          chunks.push(value);
-          received += value.length;
-          if (total) {
-            setProgress(Math.round((received / total) * 100));
-          }
-        }
-      }
-
-      if (fakeInterval) window.clearInterval(fakeInterval);
-      setProgress(100);
-
-      const blob = new Blob(chunks, { type: "application/pdf" });
-      saveAndOpen(blob);
-    } catch (e) {
       setProgress(null);
       tryDirectOpen();
     } finally {
-      setDownloading(false);
-      setTimeout(() => setProgress(null), 600);
+      setTimeout(() => setDownloading(false), 300);
     }
   };
 
