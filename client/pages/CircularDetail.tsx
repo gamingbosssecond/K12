@@ -11,6 +11,8 @@ export default function CircularDetail() {
     day: "2-digit",
     year: "numeric",
   });
+  const PRINCIPAL_IMG =
+    "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F0356abbae2b64b0ab8a599cb1148f55f?format=webp&width=800";
   return (
     <div className="mx-auto max-w-3xl">
       <h1 className="mb-6 text-2xl font-semibold">{c.title}</h1>
@@ -21,7 +23,14 @@ export default function CircularDetail() {
           </p>
         ))}
         <div className="mt-6 flex items-center justify-between text-sm text-muted-foreground">
-          <div>Fr. Armstrong Edison SJ</div>
+          <div className="flex items-center gap-3">
+            <img
+              src={PRINCIPAL_IMG}
+              alt="Fr. Armstrong Edison SJ"
+              className="h-8 w-8 rounded-full object-cover"
+            />
+            <span>Fr. Armstrong Edison SJ</span>
+          </div>
           <div>{d}</div>
         </div>
       </article>
