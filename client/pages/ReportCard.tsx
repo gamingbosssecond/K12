@@ -65,10 +65,9 @@ export default function ReportCard() {
   };
 
   const tryDirectOpen = () => {
-    // As a last resort, let the browser handle the cross-origin download/open
     const a = document.createElement("a");
     a.href = remoteUrl;
-    a.download = "report-card.pdf";
+    a.download = "report-card.webp";
     document.body.appendChild(a);
     a.click();
     a.remove();
