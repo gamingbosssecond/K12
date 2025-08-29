@@ -168,6 +168,24 @@ export default function Placeholder({ title }: { title: string }) {
     );
   }
 
+  if (title === "Logout") {
+    return (
+      <div className="mx-auto max-w-md">
+        <Alert variant="destructive" className="mb-4">
+          <AlertTitle>Logounf failed</AlertTitle>
+          <AlertDescription>
+            Unable to complete logout at this time. Please try again later.
+          </AlertDescription>
+        </Alert>
+        <div className="text-center">
+          <Link className="text-brand hover:underline" to="/">
+            Back to Dashboard
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-lg border border-border bg-card p-8 text-center">
       <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">404</div>
