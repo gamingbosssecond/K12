@@ -22,18 +22,6 @@ export default function HomeworkDetail() {
     // Economics homework with document
     return (
       <div className="mx-auto max-w-3xl">
-        <div className="mb-6">
-          <Link
-            to="/homework"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Homework
-          </Link>
-        </div>
-
-        <h1 className="mb-6 text-2xl font-semibold">Homework - Economics</h1>
-
         <div className="bg-card rounded-lg border p-6 space-y-6">
           <div className="flex items-start gap-4">
             <img
@@ -99,20 +87,6 @@ export default function HomeworkDetail() {
     // IT homework with multiple topics and links
     return (
       <div className="mx-auto max-w-3xl">
-        <div className="mb-6">
-          <Link
-            to="/homework"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Homework
-          </Link>
-        </div>
-
-        <h1 className="mb-6 text-2xl font-semibold">
-          Homework - Information Technology (IT)
-        </h1>
-
         <div className="text-sm text-muted-foreground mb-4">
           EvsJpXounsitug/view?usp=drivesdk
         </div>
@@ -148,18 +122,6 @@ export default function HomeworkDetail() {
   // Default homework detail view
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-6">
-        <Link
-          to="/homework"
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Homework
-        </Link>
-      </div>
-
-      <h1 className="mb-6 text-2xl font-semibold">Homework - {item.subject}</h1>
-
       <div className="bg-card rounded-lg border p-6">
         <div className="flex items-start gap-4 mb-4">
           <img
