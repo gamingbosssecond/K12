@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { useNotifications } from "@/contexts/NotificationContext";
+import { circulars } from "@/data/circulars";
 
 const navItems: { label: string; to: string; icon: React.ElementType }[] = [
   { label: "Homework", to: "/homework", icon: FileText },
@@ -127,7 +128,9 @@ export default function AppLayout() {
     if (location.pathname.startsWith("/homework/")) {
       currentPageTitle = "Homework";
     } else if (location.pathname.startsWith("/circulars/")) {
-      currentPageTitle = "Circulars/Notice";
+      const id = location.pathname.split("/")[2];
+      const c = circulars.find((x) => x.id === id);
+      currentPageTitle = c?.title ?? "Circulars/Notice";
     } else {
       currentPageTitle = "K12App";
     }
