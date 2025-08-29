@@ -168,11 +168,10 @@ export default function Placeholder({ title }: { title: string }) {
   }
 
   return (
-    <div className="rounded-lg border border-border bg-card p-6 text-center">
-      <p className="text-sm text-muted-foreground">
-        This page is ready to be customized. Tell me what to show here and I
-        will build it next.
-      </p>
+    <div className="rounded-lg border border-border bg-card p-8 text-center">
+      <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">404</div>
+      <h2 className="text-lg font-semibold">This page is facing a technical error</h2>
+      <p className="mt-2 text-sm text-muted-foreground">Please try again later.</p>
       <div className="mt-6">
         <Link className="text-brand hover:underline" to="/">
           Back to Dashboard
