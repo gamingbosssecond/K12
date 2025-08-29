@@ -25,12 +25,11 @@ function Splash() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-black">
       <div className="h-28 w-28 rounded bg-white shadow-lg flex items-center justify-center">
-        <svg viewBox="0 0 120 120" width="68" height="68" aria-label="K12 APP logo">
-          <polygon points="20,90 50,60 20,30" fill="#0EA5E9" />
-          <polygon points="50,90 80,60 50,30" fill="#F97316" />
-          <text x="82" y="60" fontSize="28" fontWeight="700" fill="#16A34A">12</text>
-          <text x="60" y="95" fontSize="16" fontWeight="700" fill="#0F172A">APP</text>
-        </svg>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F828881956ae84a2398ee5c77fa7b0ba9?format=webp&width=240"
+          alt="K12 APP logo"
+          className="h-20 w-20 object-contain"
+        />
       </div>
     </div>
   );
