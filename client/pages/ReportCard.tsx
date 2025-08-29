@@ -56,13 +56,11 @@ export default function ReportCard() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "report-card.pdf";
+    a.download = "report-card.webp";
     document.body.appendChild(a);
     a.click();
     a.remove();
-    // Also open the file for viewing
     window.open(url, "_blank");
-    // Revoke later to allow the new tab to load
     setTimeout(() => window.URL.revokeObjectURL(url), 2000);
   };
 
