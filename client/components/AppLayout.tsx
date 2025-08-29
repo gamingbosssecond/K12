@@ -137,8 +137,7 @@ export default function AppLayout() {
   }
 
   const handleBack = () => {
-    // Always navigate to main page
-    navigate("/");
+    navigate(-1);
   };
 
   const handleRefresh = () => {
