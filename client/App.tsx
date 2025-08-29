@@ -24,13 +24,11 @@ const queryClient = new QueryClient();
 function Splash() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-black">
-      <div className="h-28 w-28 rounded bg-white shadow-lg flex items-center justify-center">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F828881956ae84a2398ee5c77fa7b0ba9?format=webp&width=240"
-          alt="K12 APP logo"
-          className="h-20 w-20 object-contain"
-        />
-      </div>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F828881956ae84a2398ee5c77fa7b0ba9?format=webp&width=240"
+        alt="K12 APP logo"
+        className="h-28 w-28 object-contain"
+      />
     </div>
   );
 }
