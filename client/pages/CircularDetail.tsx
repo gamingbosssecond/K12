@@ -15,7 +15,6 @@ export default function CircularDetail() {
     "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F0356abbae2b64b0ab8a599cb1148f55f?format=webp&width=800";
   return (
     <div className="mx-auto max-w-3xl">
-      <h1 className="mb-6 text-2xl font-semibold">{c.title}</h1>
       <article className="rounded-lg border bg-card p-5 leading-relaxed">
         {c.content.split("\n").map((p, i) => (
           <p key={i} className="mb-4 last:mb-0">
