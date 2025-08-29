@@ -12,7 +12,6 @@ export default function Notifications() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <h1 className="mb-4 text-2xl font-semibold">Notifications</h1>
       <div className="divide-y rounded-lg border bg-card">
         {notifications.map((n) => (
           <div
