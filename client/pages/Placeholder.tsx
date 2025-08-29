@@ -4,6 +4,7 @@ import { feeData, studentFeeInfo } from "@/data/fees";
 import { teachers } from "@/data/teachers";
 import { ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export default function Placeholder({ title }: { title: string }) {
   if (title === "Homework") {
