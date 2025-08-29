@@ -12,9 +12,7 @@ export const circulars: Circular[] = [
     title: "K12 App Services Under Technical Surveillance – Report Card Access Only",
     excerpt: "K12 App is under technical surveillance; only Report Card access is available.",
     dateISO: new Date().toISOString(),
-    content: `Date: 31-Sep-2025
-
-All Students, Parents, and Staff are hereby informed that the K12 App portal is currently facing certain technical issues.
+    content: `All Students, Parents, and Staff are hereby informed that the K12 App portal is currently facing certain technical issues.
 
 At present, only the Report Card Download option is available for use. All other features and services of the portal are under technical surveillance and maintenance.
 
