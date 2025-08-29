@@ -48,12 +48,4 @@ export const notifications: NotificationItem[] = [
     time: "1d",
     seen: true,
   },
-  {
-    id: "5",
-    author: "Mr. Sameer Kumar",
-    message:
-      "Hey there, Abhijeet Rao! You've got a new message waiting from Mr. Sameer Kumar! Don't miss out, hop into your K12-Diary now!",
-    time: "2d",
-    seen: true,
-  },
 ];
