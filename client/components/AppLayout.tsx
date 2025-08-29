@@ -191,7 +191,7 @@ export default function AppLayout() {
                     </div>
                   </SheetContent>
                 </Sheet>
-                <Link to="/" className="font-semibold tracking-tight">
+                <Link to="/" className="font-medium text-[16px] tracking-tight">
                   K12App
                 </Link>
               </>
