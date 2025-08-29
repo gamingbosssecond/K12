@@ -15,14 +15,18 @@ export default function Circulars() {
         {circulars.map((c) => {
           const { day, mon } = formatDate(c.dateISO);
           return (
-            <Link key={c.id} to={`/circulars/${c.id}`} className="flex items-center gap-4 p-4 hover:bg-accent">
-              <div className="flex h-14 w-14 flex-col items-center justify-center rounded bg-secondary text-center">
-                <div className="text-lg font-bold leading-none">{day}</div>
-                <div className="text-[10px] tracking-wide text-muted-foreground">{mon}</div>
+            <Link key={c.id} to={`/circulars/${c.id}`} className="flex items-center gap-4 p-4 hover:bg-accent/50">
+              <div className="flex h-14 w-14 flex-col overflow-hidden rounded border border-blue-200">
+                <div className="bg-[#2B6CB0] text-white text-[10px] font-semibold tracking-wider text-center py-1 uppercase">
+                  {mon}
+                </div>
+                <div className="flex-1 flex items-center justify-center bg-blue-50 text-[#2B6CB0]">
+                  <div className="text-lg font-extrabold leading-none">{day}</div>
+                </div>
               </div>
-              <div className="flex-1">
-                <div className="text-base font-semibold leading-tight">{c.title}</div>
-                <div className="text-sm text-muted-foreground">{c.excerpt}</div>
+              <div className="flex-1 min-w-0">
+                <div className="text-base font-semibold leading-tight truncate">{c.title}</div>
+                <div className="text-sm text-muted-foreground line-clamp-1">{c.excerpt}</div>
               </div>
               <div className="text-foreground/60">›</div>
             </Link>
