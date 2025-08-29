@@ -9,7 +9,6 @@ export default function Placeholder({ title }: { title: string }) {
   if (title === "Homework") {
     return (
       <div className="mx-auto max-w-3xl">
-        <h1 className="mb-4 text-2xl font-semibold">Homework</h1>
         <div className="text-sm text-muted-foreground mb-4">Ch-1</div>
         <div className="divide-y rounded-lg border bg-card">
           {homework.map((item) => (
@@ -52,8 +51,6 @@ export default function Placeholder({ title }: { title: string }) {
   if (title === "Subject Teachers") {
     return (
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-6 text-2xl font-semibold">Subject Teachers</h1>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {teachers.map((teacher) => (
             <div
@@ -85,8 +82,6 @@ export default function Placeholder({ title }: { title: string }) {
   if (title === "School Fee") {
     return (
       <div className="mx-auto max-w-3xl">
-        <h1 className="mb-6 text-2xl font-semibold">School Fee</h1>
-
         {/* Student Info Section */}
         <div className="flex items-center gap-4 mb-6 bg-card p-4 rounded-lg border">
           <img
@@ -154,8 +149,7 @@ export default function Placeholder({ title }: { title: string }) {
 
   return (
     <div className="rounded-lg border border-border bg-card p-6 text-center">
-      <h1 className="text-xl font-semibold tracking-wide">{title}</h1>
-      <p className="mt-3 text-sm text-muted-foreground">
+      <p className="text-sm text-muted-foreground">
         This page is ready to be customized. Tell me what to show here and I
         will build it next.
       </p>
