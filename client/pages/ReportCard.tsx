@@ -89,6 +89,10 @@ export default function ReportCard() {
   };
 
   const handleDownload = async () => {
+    if (isAdmit) {
+      setTimeoutOpen(true);
+      return;
+    }
     try {
       setDownloading(true);
       setProgress(null);
