@@ -45,12 +45,17 @@ function RadialProgress({ value }: { value: number }) {
   );
 }
 
+import { useLocation } from "react-router-dom";
+
 export default function ReportCard() {
   const [downloading, setDownloading] = useState(false);
   const [progress, setProgress] = useState<number | null>(null);
   const fileUrl = "/api/report-card";
   const remoteUrl =
     "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F3362ece5ef4646de9a3832926e453f75?format=webp&width=800";
+  const location = useLocation();
+  const isAdmit = location.pathname.includes("admit-card");
+  const downloadLabel = isAdmit ? "Download Admit Card" : "Download Report Card";
 
   const saveAndOpen = (blob: Blob) => {
     const url = window.URL.createObjectURL(blob);
