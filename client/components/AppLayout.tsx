@@ -10,6 +10,7 @@ import {
   ArrowLeft,
   RotateCcw,
   Bell,
+  FileText,
   NotebookPen,
   BookOpen,
   Megaphone,
@@ -48,7 +49,7 @@ import { useNotifications } from "@/contexts/NotificationContext";
 import { circulars } from "@/data/circulars";
 
 const navItems: { label: string; to: string; icon: React.ElementType }[] = [
-  { label: "Homework", to: "/homework", icon: NotebookPen },
+  { label: "Homework", to: "/homework", icon: FileText },
   { label: "K12-Diary", to: "/k12-diary", icon: BookOpen },
   { label: "Circulars/Notice", to: "/circulars", icon: Megaphone },
   { label: "Disciplinary Remarks", to: "/discipline", icon: ShieldAlert },
