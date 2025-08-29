@@ -10,17 +10,17 @@ export type NotificationItem = {
 export const notifications: NotificationItem[] = [
   {
     id: "1",
-    author: "Fr. Armstrong Edison Sj",
+    author: "Fr. Armstrong Edison SJ",
     message:
-      "Hello, Niraj Kumar! Discover the latest circulars/notices from Fr. Armstrong Edison Sj. Stay informed with important updates and announcements!",
+      "Hello, Niraj Kumar! Discover the latest circulars/notices from Fr. Armstrong Edison SJ. Stay informed with important updates and announcements!",
     time: "4h",
     seen: false,
   },
   {
     id: "2",
-    author: "Fr. Armstrong Edison Sj",
+    author: "Fr. Armstrong Edison SJ",
     message:
-      "Stay informed with the latest circulars/notices from Fr. Armstrong Edison Sj for Aditya Kumar. Keep up-to-date with important announcements and events. Check them out now!",
+      "Stay informed with the latest circulars/notices from Fr. Armstrong Edison SJ for Aditya Kumar. Keep up-to-date with important announcements and events. Check them out now!",
     time: "4h",
     seen: false,
   },
