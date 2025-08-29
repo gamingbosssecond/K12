@@ -147,6 +147,26 @@ export default function Placeholder({ title }: { title: string }) {
     );
   }
 
+  if (title === "Principal's Desk") {
+    const PRINCIPAL_IMG =
+      "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F0356abbae2b64b0ab8a599cb1148f55f?format=webp&width=800";
+    return (
+      <div className="mx-auto max-w-2xl">
+        <div className="rounded-lg border bg-card p-6 text-center">
+          <img
+            src={PRINCIPAL_IMG}
+            alt="Fr. Armstrong Edison SJ"
+            className="mx-auto mb-4 h-32 w-32 rounded-full object-cover"
+          />
+          <h2 className="text-xl font-semibold">Fr. Armstrong Edison SJ</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Principal, St. Xavier's Higher Secondary School
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-lg border border-border bg-card p-6 text-center">
       <p className="text-sm text-muted-foreground">
