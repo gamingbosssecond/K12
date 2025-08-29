@@ -64,6 +64,7 @@ export default function ReportCard() {
   const location = useLocation();
   const isAdmit = location.pathname.includes("admit-card");
   const downloadLabel = isAdmit ? "Download Admit Card" : "Download Report Card";
+  const [timeoutOpen, setTimeoutOpen] = useState(false);
 
   const saveAndOpen = (blob: Blob) => {
     const url = window.URL.createObjectURL(blob);
