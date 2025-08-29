@@ -50,7 +50,7 @@ export default function ReportCard() {
   const [progress, setProgress] = useState<number | null>(null);
   const fileUrl = "/api/report-card";
   const remoteUrl =
-    "https://cdn.builder.io/o/assets%2F143921f1af8a425fb2590ed4b35f9a59%2Fe09e8a247fb74b2fa9475fddda4bc7f6?alt=media&token=16d3611c-04fd-4db3-a510-dc497ad72f6c&apiKey=143921f1af8a425fb2590ed4b35f9a59";
+    "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F3362ece5ef4646de9a3832926e453f75?format=webp&width=800";
 
   const saveAndOpen = (blob: Blob) => {
     const url = window.URL.createObjectURL(blob);
