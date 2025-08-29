@@ -170,18 +170,29 @@ export default function Placeholder({ title }: { title: string }) {
 
   if (title === "Logout") {
     return (
-      <div className="mx-auto max-w-md">
-        <Alert variant="destructive" className="mb-4">
-          <AlertTitle>Logounf failed</AlertTitle>
-          <AlertDescription>
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <Alert
+          variant="destructive"
+          className="mx-auto max-w-sm p-6 rounded-xl border-red-200/80 bg-red-50 text-red-800 dark:bg-red-950/20 dark:text-red-200 shadow-sm text-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mx-auto mb-2 h-6 w-6"
+            aria-hidden
+          >
+            <path
+              fillRule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.75 6a.75.75 0 0 0-1.5 0v5a.75.75 0 0 0 1.5 0v-5Zm0 8.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <AlertTitle className="text-base font-semibold">Logounf failed</AlertTitle>
+          <AlertDescription className="mt-1 text-sm">
             Unable to complete logout at this time. Please try again later.
           </AlertDescription>
         </Alert>
-        <div className="text-center">
-          <Link className="text-brand hover:underline" to="/">
-            Back to Dashboard
-          </Link>
-        </div>
       </div>
     );
   }
