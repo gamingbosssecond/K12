@@ -9,8 +9,10 @@ export type Circular = {
 export const circulars: Circular[] = [
   {
     id: "technical-issue",
-    title: "K12 App Services Under Technical Surveillance – Report Card Access Only",
-    excerpt: "K12 App is under technical surveillance; only Report Card access is available.",
+    title:
+      "K12 App Services Under Technical Surveillance – Report Card Access Only",
+    excerpt:
+      "K12 App is under technical surveillance; only Report Card access is available.",
     dateISO: new Date().toISOString(),
     content: `All Students, Parents, and Staff are hereby informed that the K12 App portal is currently facing certain technical issues.
 

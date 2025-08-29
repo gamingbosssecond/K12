@@ -1,7 +1,8 @@
 import { RequestHandler } from "express";
 
 // Remote report card file URL provided by the user (image to be downloaded/opened)
-const REMOTE_FILE = "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F3362ece5ef4646de9a3832926e453f75?format=webp&width=800";
+const REMOTE_FILE =
+  "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F3362ece5ef4646de9a3832926e453f75?format=webp&width=800";
 
 export const handleReportCard: RequestHandler = async (_req, res) => {
   try {
@@ -15,7 +16,8 @@ export const handleReportCard: RequestHandler = async (_req, res) => {
       res.setHeader("Content-Length", contentLength);
     }
 
-    const contentType = response.headers.get("content-type") || "application/octet-stream";
+    const contentType =
+      response.headers.get("content-type") || "application/octet-stream";
     res.setHeader("Content-Type", contentType);
 
     let ext = "bin";

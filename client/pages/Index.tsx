@@ -10,13 +10,19 @@ export default function Index() {
             alt="St. Xavier's logo"
             className="mx-auto mb-6 h-36 w-36 sm:h-40 sm:w-40 rounded-full object-contain"
           />
-          <h1 className="text-[34px] sm:text-[40px] leading-tight font-semibold tracking-[-0.5px]">St. Xavier's</h1>
-          <p className="text-base sm:text-lg text-muted-foreground">Higher Secondary School, Bettiah</p>
+          <h1 className="text-[34px] sm:text-[40px] leading-tight font-semibold tracking-[-0.5px]">
+            St. Xavier's
+          </h1>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Higher Secondary School, Bettiah
+          </p>
         </div>
       </section>
 
       <div className="mx-auto -mt-6 max-w-2xl rounded-lg bg-white p-8 text-center dark:bg-card">
-        <h2 className="text-[20px] leading-7 font-semibold tracking-[1px]">ABHIJEET RAO</h2>
+        <h2 className="text-[20px] leading-7 font-semibold tracking-[1px]">
+          ABHIJEET RAO
+        </h2>
         <div className="mt-2 space-y-1 text-sm text-muted-foreground">
           <p>ID: 10220E6147</p>
           <p>Class: X-B, Roll No.: 01</p>

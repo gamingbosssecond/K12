@@ -188,7 +188,9 @@ export default function Placeholder({ title }: { title: string }) {
               clipRule="evenodd"
             />
           </svg>
-          <AlertTitle className="text-base font-semibold">Logounf failed</AlertTitle>
+          <AlertTitle className="text-base font-semibold">
+            Logounf failed
+          </AlertTitle>
           <AlertDescription className="mt-1 text-sm">
             Unable to complete logout at this time. Please try again later.
           </AlertDescription>
@@ -199,9 +201,15 @@ export default function Placeholder({ title }: { title: string }) {
 
   return (
     <div className="rounded-lg border border-border bg-card p-8 text-center">
-      <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">404</div>
-      <h2 className="text-lg font-semibold">This page is facing a technical error</h2>
-      <p className="mt-2 text-sm text-muted-foreground">Please try again later.</p>
+      <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center">
+        404
+      </div>
+      <h2 className="text-lg font-semibold">
+        This page is facing a technical error
+      </h2>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Please try again later.
+      </p>
       <div className="mt-6">
         <Link className="text-brand hover:underline" to="/">
           Back to Dashboard

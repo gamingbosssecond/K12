@@ -2,7 +2,8 @@ import { useNotifications } from "@/contexts/NotificationContext";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-const PRINCIPAL_IMG = "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F0356abbae2b64b0ab8a599cb1148f55f?format=webp&width=800";
+const PRINCIPAL_IMG =
+  "https://cdn.builder.io/api/v1/image/assets%2F87cdc21a555b449ead0e398a6201639b%2F0356abbae2b64b0ab8a599cb1148f55f?format=webp&width=800";
 
 export default function Notifications() {
   const { notifications, markAsSeen } = useNotifications();
