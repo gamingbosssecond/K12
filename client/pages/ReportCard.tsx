@@ -49,14 +49,58 @@ export default function ReportCard() {
   const [downloading, setDownloading] = useState(false);
   const [progress, setProgress] = useState<number | null>(null);
   const fileUrl = "/api/report-card";
+  const remoteUrl =
+    "https://cdn.builder.io/o/assets%2F143921f1af8a425fb2590ed4b35f9a59%2Fe09e8a247fb74b2fa9475fddda4bc7f6?alt=media&token=16d3611c-04fd-4db3-a510-dc497ad72f6c&apiKey=143921f1af8a425fb2590ed4b35f9a59";
+
+  const saveAndOpen = (blob: Blob) => {
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "report-card.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    // Also open the file for viewing
+    window.open(url, "_blank");
+    // Revoke later to allow the new tab to load
+    setTimeout(() => window.URL.revokeObjectURL(url), 2000);
+  };
+
+  const tryDirectOpen = () => {
+    // As a last resort, let the browser handle the cross-origin download/open
+    const a = document.createElement("a");
+    a.href = remoteUrl;
+    a.download = "report-card.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.open(remoteUrl, "_blank");
+  };
 
   const handleDownload = async () => {
     let fakeInterval: number | undefined;
     try {
       setDownloading(true);
       setProgress(0);
-      const res = await fetch(fileUrl);
-      if (!res.ok || !res.body) throw new Error("Failed to download");
+      let res: Response | null = null;
+      try {
+        res = await fetch(fileUrl);
+      } catch {
+        res = null;
+      }
+
+      if (!res || !res.ok || !res.body) {
+        // Fallback: fetch directly from remote (browser handles CORS)
+        try {
+          const direct = await fetch(remoteUrl);
+          if (!direct.ok || !direct.body) throw new Error("remote fetch failed");
+          res = direct;
+        } catch {
+          tryDirectOpen();
+          setProgress(null);
+          return;
+        }
+      }
 
       const totalHeader = res.headers.get("content-length");
       const total = totalHeader ? parseInt(totalHeader, 10) : 0;
@@ -65,7 +109,6 @@ export default function ReportCard() {
       let received = 0;
 
       if (!total) {
-        // Simulate progress when total size is unknown
         fakeInterval = window.setInterval(() => {
           setProgress((p) => {
             const next = typeof p === "number" ? Math.min(p + 2, 90) : 0;
@@ -90,16 +133,10 @@ export default function ReportCard() {
       setProgress(100);
 
       const blob = new Blob(chunks, { type: "application/pdf" });
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "report-card.pdf";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      window.URL.revokeObjectURL(url);
+      saveAndOpen(blob);
     } catch (e) {
       setProgress(null);
+      tryDirectOpen();
     } finally {
       setDownloading(false);
       setTimeout(() => setProgress(null), 600);
