@@ -12,8 +12,13 @@ export const circulars: Circular[] = [
     title: "Important: Technical Issue",
     excerpt: "There is a technical issue affecting some services.",
     dateISO: new Date().toISOString(),
-    content:
-      "Dear parents and students,\n\nWe are currently experiencing a technical issue affecting certain features of the app. Our team is working on a fix with top priority. We will update you as soon as it is resolved.\n\nThank you for your patience and cooperation.\n\nRegards,\nFr. Armstrong Edison SJ\nPrincipal",
+    content: `Date: 31-Sep-2025
+
+All Students, Parents, and Staff are hereby informed that the K12 App portal is currently facing certain technical issues.
+
+At present, only the Report Card Download option is available for use. All other features and services of the portal are under technical surveillance and maintenance.
+
+We request everyone to kindly focus only on downloading report cards until further notice. The inconvenience caused is regretted, and we appreciate your patience and cooperation.`,
   },
   {
     id: "ptm-tomorrow-aug29",
