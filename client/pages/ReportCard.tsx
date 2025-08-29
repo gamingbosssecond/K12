@@ -117,7 +117,7 @@ export default function ReportCard() {
               </div>
               <Button disabled variant="outline" className="w-full gap-2 py-3">
                 <CloudDownload className="h-4 w-4" />
-                Download Report Card
+                {downloadLabel}
               </Button>
             </div>
           ) : (
@@ -128,7 +128,7 @@ export default function ReportCard() {
               className="w-full gap-2 py-3"
             >
               <CloudDownload className="h-4 w-4" />
-              {downloading ? "Preparing..." : "Download Report Card"}
+              {downloading ? "Preparing..." : downloadLabel}
             </Button>
           )}
         </div>
