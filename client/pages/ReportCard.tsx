@@ -122,7 +122,7 @@ export default function ReportCard() {
         </div>
 
         <div className="px-6 pb-6">
-          {typeof progress === "number" ? (
+          {typeof progress === "number" && !isAdmit ? (
             <div className="flex flex-col items-center">
               <RadialProgress value={progress} />
               <div className="text-sm text-muted-foreground -mt-4 mb-4">
@@ -144,6 +144,18 @@ export default function ReportCard() {
               {downloading ? "Preparing..." : downloadLabel}
             </Button>
           )}
+          <AlertDialog open={timeoutOpen} onOpenChange={setTimeoutOpen}>
+            <AlertDialogContent className="max-w-sm">
+              <AlertDialogHeader>
+                <AlertDialogTitle>Time out</AlertDialogTitle>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogAction onClick={() => setTimeoutOpen(false)}>
+                  OK
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       </div>
     </div>
