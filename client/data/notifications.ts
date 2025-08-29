@@ -40,12 +40,4 @@ export const notifications: NotificationItem[] = [
     time: "1d",
     seen: false,
   },
-  {
-    id: "4",
-    author: "Accounts",
-    message:
-      "Dear Parent, the fee for your ward ABHIJEET RAO is due: Rs. 4480. Please make the payment before the due date to avoid late fees. If already paid, kindly ignore this message.",
-    time: "1d",
-    seen: true,
-  },
 ];
