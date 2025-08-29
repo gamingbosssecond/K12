@@ -11,7 +11,6 @@ function formatDate(dateISO: string) {
 export default function Circulars() {
   return (
     <div className="mx-auto max-w-3xl">
-      <h1 className="mb-4 text-2xl font-semibold">Circulars/Notice</h1>
       <div className="divide-y rounded-lg border bg-card">
         {circulars.map((c) => {
           const { day, mon } = formatDate(c.dateISO);
