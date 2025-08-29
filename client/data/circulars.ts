@@ -8,6 +8,14 @@ export type Circular = {
 
 export const circulars: Circular[] = [
   {
+    id: "technical-issue",
+    title: "Important: Technical Issue",
+    excerpt: "There is a technical issue affecting some services.",
+    dateISO: new Date().toISOString(),
+    content:
+      "Dear parents and students,\n\nWe are currently experiencing a technical issue affecting certain features of the app. Our team is working on a fix with top priority. We will update you as soon as it is resolved.\n\nThank you for your patience and cooperation.\n\nRegards,\nFr. Armstrong Edison SJ\nPrincipal",
+  },
+  {
     id: "ptm-tomorrow-aug29",
     title: "PTM tomorrow",
     excerpt: "Dear parents and students, Good afternoon",
