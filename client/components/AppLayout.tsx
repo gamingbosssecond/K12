@@ -93,7 +93,7 @@ const pageTitles: Record<string, string> = {
   "/class-schedule": "Class Schedule",
   "/exam-schedule": "Exam Schedule",
   "/calendar": "Academic Calendar",
-  "/admit-card": "Report Card",
+  "/admit-card": "Admit Card",
   "/report-card": "Report Card",
   "/student-profile": "Student Profile",
   "/e-content": "e-Content",
