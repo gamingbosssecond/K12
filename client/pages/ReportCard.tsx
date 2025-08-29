@@ -30,8 +30,6 @@ export default function ReportCard() {
 
   return (
     <div className="mx-auto max-w-md">
-      <h1 className="mb-6 text-2xl font-semibold">Admit Card</h1>
-
       <div className="bg-card rounded-lg border p-0 text-center overflow-hidden">
         {/* Student Photo */}
         <div className="bg-gray-50 dark:bg-gray-800 p-8">
