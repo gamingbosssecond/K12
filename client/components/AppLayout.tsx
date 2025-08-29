@@ -148,7 +148,7 @@ export default function AppLayout() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="w-full border-b border-border bg-background">
         <div className="mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-3 sm:px-6">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             {isHomePage ? (
               <>
                 <Sheet open={open} onOpenChange={setOpen}>
@@ -208,7 +208,7 @@ export default function AppLayout() {
                 >
                   <ArrowLeft className="size-5" />
                 </Button>
-                <h1 className="font-semibold tracking-tight text-lg">
+                <h1 className="font-semibold tracking-tight text-lg truncate max-w-[62vw] sm:max-w-[70vw]">
                   {currentPageTitle}
                 </h1>
               </>
